@@ -9,12 +9,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-    computed: {
-        count() {
-            return this.$store.getters.count
-        }
-    },
+    computed:  mapGetters(['count']),
+  
     methods: {
         increase() {
             this.$store.commit('increase', 10)
