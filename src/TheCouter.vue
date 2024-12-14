@@ -4,6 +4,7 @@
   <button class="btn btn-primary" @click="increase">Увеличить</button>
   <h2>Умноженое на 3</h2>
   <h2>{{ $store.getters.multBythree }}</h2>
+  <button class="btn btn-primary" @click="$store.dispatch('asyncMultByFive')">Асинхронное умножение</button>
 
 </template>
 
