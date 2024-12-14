@@ -8,7 +8,7 @@ const store = createStore({
     },
     mutations: {
       increase (state, payload) {
-        state.count += payload
+        state.count += payload.a
       }
     }
 })

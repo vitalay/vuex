@@ -8,7 +8,10 @@
 export default {
     methods: {
         increase() {
-            this.$store.commit('increase', 5)
+            this.$store.commit('increase', {
+                value: 20,
+                a: 111
+            })
         }
 
     }
