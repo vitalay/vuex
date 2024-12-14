@@ -6,6 +6,11 @@ const store = createStore({
         count: 1
       }
     },
+    mutations: {
+      increase (state, payload) {
+        state.count += payload
+      }
+    }
 })
 
 export default store

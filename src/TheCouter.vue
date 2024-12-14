@@ -8,7 +8,7 @@
 export default {
     methods: {
         increase() {
-            this.$store.state.count++
+            this.$store.commit('increase', 5)
         }
 
     }
