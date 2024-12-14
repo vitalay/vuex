@@ -14,6 +14,9 @@ const store = createStore({
     getters: {
       count (state) {
         return state.count
+      },
+      multBythree (state) {
+        return state.count * 3
       }
     }
 })

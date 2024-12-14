@@ -2,6 +2,9 @@
   <h1>Counter</h1>
   <h2>{{ $store.getters.count }}</h2>
   <button class="btn btn-primary" @click="increase">Увеличить</button>
+  <h2>Умноженое на 3</h2>
+  <h2>{{ $store.getters.multBythree }}</h2>
+
 </template>
 
 <script>
