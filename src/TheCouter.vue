@@ -1,6 +1,6 @@
 <template>
   <h1>Counter</h1>
-  <h2>{{ $store.state.count }}</h2>
+  <h2>{{ $store.getters.count }}</h2>
   <button class="btn btn-primary" @click="increase">Увеличить</button>
 </template>
 
@@ -8,10 +8,7 @@
 export default {
     methods: {
         increase() {
-            this.$store.commit('increase', {
-                value: 20,
-                a: 111
-            })
+            this.$store.commit('increase', 10)
         }
 
     }
