@@ -4,31 +4,32 @@ const store = createStore({
   state() {
     return {
       count: 1,
-    };
+    }
   },
   mutations: {
     increase(state, payload) {
       state.count += payload;
     },
-    multByFive(state) {
-      state.count *= 5;
+    multByFive(state, payload = 5) {
+      state.count *= payload;
     },
   },
   getters: {
     count(state) {
       return state.count;
     },
-    multByThree(state) {
-      return state.count * 3;
+    multByThree(_, getters) {
+      return getters.count * 3;
     },
   },
   actions: {
-    asyncMultByFive(context) {
+    asyncMultByFive({ commit }) {
       setTimeout(() => {
-        context.commit('multByFive');
+        commit('multByFive'); // Теперь нет необходимости передавать значение, оно берётся по умолчанию
       }, 1000);
     },
   },
 });
 
 export default store;
+
